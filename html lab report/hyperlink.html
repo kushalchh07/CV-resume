@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #ff6347;
+        }
+        section {
+            padding: 20px;
+            margin: 20px 0;
+            display: none; /* Hide all sections by default */
+        }
+        section.active {
+            display: block; /* Show the active section */
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #ff6347;
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function showSection(id) {
+            // Hide all sections
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => section.classList.remove('active'));
+            
+            // Show the selected section
+            const activeSection = document.getElementById(id);
+            activeSection.classList.add('active');
+        }
+
+        // Ensure the first section (home) is displayed by default
+        window.onload = function() {
+            showSection('home');
+        }
+    </script>
+</head>
+<body>
+
+    <nav>
+        <a href="javascript:void(0)" onclick="showSection('home')">Home</a>
+        <a href="javascript:void(0)" onclick="showSection('about')">About</a>
+        <a href="javascript:void(0)" onclick="showSection('contact')">Contact</a>
+        <a href="javascript:void(0)" onclick="showSection('external')">External Link</a>
+        <a href="javascript:void(0)" onclick="showSection('download')">Download</a>
+    </nav>
+
+    <section id="home" class="active">
+        <h1>Home</h1>
+        <p>Welcome to our simple webpage! Use the navigation links to explore different sections.</p>
+    </section>
+
+    <section id="about">
+        <h1>About</h1>
+        <p>This is the about section. Here you can write some information about the website or yourself.</p>
+    </section>
+
+    <section id="contact">
+        <h1>Contact</h1>
+        <p>Feel free to contact us at <a href="mailto:example@example.com">example@example.com</a>.</p>
+    </section>
+
+    <section id="external">
+        <h1>External Link</h1>
+        <p>Visit our favorite website: <a href="https://www.facebook.com" target="_blank">Example Website</a>.</p>
+    </section>
+
+    <section id="download">
+        <h1>Download</h1>
+        <p>Download our latest file: <a href="path/to/your/file.zip" download>Download File</a>.</p>
+    </section>
+
+</body>
+</html>
