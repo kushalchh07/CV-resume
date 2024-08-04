@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with Hyperlinks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        h1, h2 {
+            color: #2c3e50;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #e74c3c;
+            text-decoration: underline;
+        }
+
+        .highlight {
+            background-color: yellow;
+        }
+
+        .external-link::after {
+            content: " (external)";
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello, I'm Kushal Poudel</h1>
+    <p class="highlight">A passionate learner and tech enthusiast. I love to play football and am a gym freak.</p>
+    
+    <h2>Internal Links</h2>
+    <p>Internal links navigate to other sections within the same website:</p>
+    <ul>
+        <li><a href="#section1">Go to Section 1</a></li>
+        <li><a href="#section2">Go to Section 2</a></li>
+    </ul>
+
+    <h2>External Links</h2>
+    <p>External links navigate to different websites:</p>
+    <ul>
+        <li><a href="https://www.google.com" target="_blank" class="external-link">Visit Google</a></li>
+        <li><a href="https://www.github.com" target="_blank" class="external-link">Visit GitHub</a></li>
+    </ul>
+
+    <h2>Email Links</h2>
+    <p>Email links open the user's email client:</p>
+    <ul>
+        <li><a href="mailto:kushalpoudel077@example.com">Send Email to Kushal</a></li>
+    </ul>
+
+    <h2>Telephone Links</h2>
+    <p>Telephone links allow users to make a call directly from their mobile devices:</p>
+    <ul>
+        <li><a href="tel:+9800000000">Call Kushal</a></li>
+    </ul>
+
+    <h2 id="section1">Section 1</h2>
+    <p>This is Section 1 content. Internal links can navigate here directly.</p>
+
+    <h2 id="section2">Section 2</h2>
+    <p>This is Section 2 content. Internal links can navigate here directly.</p>
+</body>
+</html>
