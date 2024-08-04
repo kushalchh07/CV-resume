@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors Example</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        p {
+            color: blue;
+        }
+
+        #unique {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .highlight {
+            background-color: yellow;
+        }
+
+        [type="text"] {
+            border: 1px solid gray;
+        }
+
+        a:hover {
+            color: red;
+        }
+
+        p::first-line {
+            font-weight: bold;
+        }
+
+        div p {
+            color: green;
+        }
+
+        ul > li {
+            list-style-type: square;
+        }
+
+        h1 + p {
+            margin-top: 0;
+        }
+
+        h1 ~ p {
+            color: gray;
+        }
+
+        h1, h2, h3 {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello, I'm Kushal Poudel</h1>
+    <p class="highlight">A passionate learner and tech enthusiast. I love to play football and am a gym freak.</p>
+    <p>This is a paragraph styled with element selector.</p>
+    <p class="highlight">This paragraph has a highlight class applied.</p>
+    <input type="text" placeholder="Text input styled with attribute selector">
+    <input type="password" placeholder="Password input not styled with attribute selector">
+
+    <div>
+        <p>This paragraph inside a div is styled with descendant selector.</p>
+    </div>
+
+    <ul>
+        <li>First item (styled with child selector)</li>
+        <li>Second item (styled with child selector)</li>
+    </ul>
+
+    <h2>Heading 2</h2>
+    <p>This paragraph is adjacent to an h2 and styled with adjacent sibling selector.</p>
+    <p>This paragraph is a general sibling of an h1 and styled with general sibling selector.</p>
+</body>
+</html>
